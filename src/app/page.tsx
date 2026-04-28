@@ -99,7 +99,7 @@ export default function Home() {
         <div className="flex-1 relative">
           {/* Heading — vertically centered */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <p className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] text-white uppercase mix-blend-overlay px-[18px] leading-[1.1] mb-0.5 self-start md:self-auto">
+            <p className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] text-white uppercase mix-blend-overlay px-[18px] leading-[1.1] mb-0.5 self-start">
               [ Hello i&apos;m ]
             </p>
             <h1 className="text-[clamp(64px,13.75vw,198px)] font-medium text-white mix-blend-overlay text-center capitalize tracking-[-0.07em] leading-[0.9] whitespace-nowrap w-full">
