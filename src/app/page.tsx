@@ -15,13 +15,8 @@ export default function Home() {
       {/* Background image */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none select-none"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: "120% auto",
-          backgroundPosition: "center 5%",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="absolute inset-0 pointer-events-none select-none hero-bg"
+        style={{ backgroundImage: `url(${heroImage})` }}
       />
 
       {/* Gradual blur overlay — fades in from bottom up */}

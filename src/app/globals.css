@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.hero-bg {
+  background-size: cover;
+  background-position: 40% bottom;
+}
+
+@media (min-width: 768px) {
+  .hero-bg {
+    background-size: 120% auto;
+    background-position: center 5%;
+  }
+}
