@@ -12,12 +12,12 @@ export default function Home() {
 
   return (
     <main className="relative h-screen overflow-hidden bg-[#c5cdd2]">
-      {/* Background image */}
+      {/* Background image — scaled to crop at elbows */}
       <img
         src={heroImage}
         alt=""
         aria-hidden
-        className="absolute inset-0 w-full h-full object-cover object-[center_20%] pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-cover object-[center_18%] scale-[1.55] pointer-events-none select-none"
       />
 
       {/* Frosted glass overlay at bottom */}
@@ -95,20 +95,20 @@ export default function Home() {
           </div>
         )}
 
-        {/* Hero content — pushed to bottom */}
-        <div className="flex-1 flex flex-col justify-end pb-8 md:pb-10">
-          {/* Heading */}
-          <div>
-            <p className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] text-white uppercase mix-blend-overlay px-[18px] leading-[1.1] mb-0.5">
+        {/* Hero content area */}
+        <div className="flex-1 relative">
+          {/* Heading — vertically centered */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <p className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] text-white uppercase mix-blend-overlay px-[18px] leading-[1.1] mb-0.5 self-start md:self-auto">
               [ Hello i&apos;m ]
             </p>
-            <h1 className="text-[clamp(64px,13.75vw,198px)] font-medium text-white mix-blend-overlay text-center capitalize tracking-[-0.07em] leading-[0.9] whitespace-nowrap">
+            <h1 className="text-[clamp(64px,13.75vw,198px)] font-medium text-white mix-blend-overlay text-center capitalize tracking-[-0.07em] leading-[0.9] whitespace-nowrap w-full">
               Harvey&nbsp;&nbsp;&nbsp;Specter
             </h1>
           </div>
 
-          {/* Description — right-aligned on desktop */}
-          <div className="flex md:justify-end mt-5 md:mt-4">
+          {/* Description — pinned bottom-right on desktop, bottom-left on mobile */}
+          <div className="absolute bottom-8 md:bottom-10 left-0 md:left-auto md:right-0 flex md:justify-end">
             <div className="max-w-[294px] flex flex-col gap-4">
               <p className="text-[13px] font-bold italic text-[#1f1f1f] uppercase tracking-[-0.04em] leading-[1.1]">
                 H.Studio is a{" "}
