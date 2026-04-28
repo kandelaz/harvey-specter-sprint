@@ -17,11 +17,11 @@ export default function Home() {
         src={heroImage}
         alt=""
         aria-hidden
-        className="absolute inset-0 w-full h-full object-cover object-[center_18%] scale-[1.55] pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-cover object-[center_5%] scale-[1.2] pointer-events-none select-none"
       />
 
-      {/* Frosted glass overlay at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-[40%] backdrop-blur-sm bg-[rgba(217,217,217,0.01)]" />
+      {/* Gradual blur overlay — fades in from bottom up */}
+      <div className="absolute bottom-0 left-0 right-0 h-[40%] backdrop-blur-md [mask-image:linear-gradient(to_top,black_40%,transparent_100%)]" />
 
       <div className="relative flex flex-col h-full px-4 md:px-8">
         {/* Navigation */}
@@ -58,7 +58,7 @@ export default function Home() {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M6 6l12 12M6 18L18 6"
-                  stroke="black"
+                  stroke="white"
                   strokeWidth="2"
                   strokeLinecap="round"
                 />
@@ -78,18 +78,18 @@ export default function Home() {
 
         {/* Mobile dropdown menu */}
         {menuOpen && (
-          <div className="md:hidden absolute top-[72px] left-0 right-0 z-50 bg-white/95 backdrop-blur-sm px-6 py-6 flex flex-col gap-1 shadow-lg">
+          <div className="md:hidden absolute top-[72px] left-0 right-0 z-50 bg-black px-6 py-6 flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-base font-semibold capitalize py-3 border-b border-black/10 last:border-0"
+                className="text-base font-semibold capitalize py-3 text-white border-b border-white/10 last:border-0"
                 onClick={() => setMenuOpen(false)}
               >
                 {link}
               </a>
             ))}
-            <button className="mt-4 w-fit bg-black text-white text-sm font-medium px-4 py-3 rounded-full">
+            <button className="mt-4 w-fit bg-white text-black text-sm font-medium px-4 py-3 rounded-full">
               Let&apos;s talk
             </button>
           </div>
