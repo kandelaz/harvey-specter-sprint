@@ -1,21 +1,27 @@
+"use client";
+
+import { useState } from "react";
+
 const heroImage =
   "https://www.figma.com/api/mcp/asset/3fc1a6cd-fa38-4515-8ef9-1c9d7b3cbf54";
 
 const navLinks = ["About", "Services", "Projects", "News", "Contact"];
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <main className="relative h-screen overflow-hidden bg-neutral-400">
+    <main className="relative h-screen overflow-hidden bg-[#c5cdd2]">
       {/* Background image */}
       <img
         src={heroImage}
         alt=""
         aria-hidden
-        className="absolute inset-0 w-full h-full object-cover object-top pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-cover object-[center_20%] pointer-events-none select-none"
       />
 
       {/* Frosted glass overlay at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-[349px] backdrop-blur-md bg-[rgba(217,217,217,0.01)]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[40%] backdrop-blur-sm bg-[rgba(217,217,217,0.01)]" />
 
       <div className="relative flex flex-col h-full px-4 md:px-8">
         {/* Navigation */}
@@ -43,32 +49,66 @@ export default function Home() {
           </button>
 
           {/* Mobile hamburger */}
-          <button className="md:hidden" aria-label="Open menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M3 6h18M3 12h18M3 18h18"
-                stroke="black"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
+          <button
+            className="md:hidden p-1"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            {menuOpen ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 6l12 12M6 18L18 6"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ) : (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M3 6h18M3 12h18M3 18h18"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            )}
           </button>
         </nav>
 
-        {/* Hero content */}
-        <div className="flex-1 flex flex-col justify-end md:justify-between pb-8 md:pb-10">
-          {/* Heading block */}
+        {/* Mobile dropdown menu */}
+        {menuOpen && (
+          <div className="md:hidden absolute top-[72px] left-0 right-0 z-50 bg-white/95 backdrop-blur-sm px-6 py-6 flex flex-col gap-1 shadow-lg">
+            {navLinks.map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase()}`}
+                className="text-base font-semibold capitalize py-3 border-b border-black/10 last:border-0"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link}
+              </a>
+            ))}
+            <button className="mt-4 w-fit bg-black text-white text-sm font-medium px-4 py-3 rounded-full">
+              Let&apos;s talk
+            </button>
+          </div>
+        )}
+
+        {/* Hero content — pushed to bottom */}
+        <div className="flex-1 flex flex-col justify-end pb-8 md:pb-10">
+          {/* Heading */}
           <div>
-            <p className="font-[family-name:var(--font-geist-mono)] text-[14px] text-white uppercase mix-blend-overlay px-[18px] leading-[1.1]">
+            <p className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] text-white uppercase mix-blend-overlay px-[18px] leading-[1.1] mb-0.5">
               [ Hello i&apos;m ]
             </p>
-            <h1 className="text-[clamp(80px,13.75vw,198px)] font-medium text-white mix-blend-overlay text-center capitalize leading-[0.9] tracking-[-0.07em] whitespace-nowrap">
+            <h1 className="text-[clamp(64px,13.75vw,198px)] font-medium text-white mix-blend-overlay text-center capitalize tracking-[-0.07em] leading-[0.9] whitespace-nowrap">
               Harvey&nbsp;&nbsp;&nbsp;Specter
             </h1>
           </div>
 
-          {/* Description — right-aligned on desktop, left on mobile */}
-          <div className="flex md:justify-end mt-6 md:mt-0">
+          {/* Description — right-aligned on desktop */}
+          <div className="flex md:justify-end mt-5 md:mt-4">
             <div className="max-w-[294px] flex flex-col gap-4">
               <p className="text-[13px] font-bold italic text-[#1f1f1f] uppercase tracking-[-0.04em] leading-[1.1]">
                 H.Studio is a{" "}
