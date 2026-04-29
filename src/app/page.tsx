@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 
-const heroImage =
-  "https://www.figma.com/api/mcp/asset/3fc1a6cd-fa38-4515-8ef9-1c9d7b3cbf54";
+const heroImage = "/hero.jpg";
 
 const navLinks = ["About", "Services", "Projects", "News", "Contact"];
 
