@@ -11,12 +11,11 @@ export default function Home() {
 
   return (
     <main className="relative h-screen overflow-hidden bg-[#c5cdd2]">
-      {/* Background image — full person visible, feet pinned to bottom */}
-      <img
-        src={heroImage}
-        alt=""
+      {/* Background image */}
+      <div
         aria-hidden
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-full w-auto max-w-none pointer-events-none select-none"
+        className="absolute inset-0 pointer-events-none select-none hero-bg"
+        style={{ backgroundImage: `url(${heroImage})` }}
       />
 
       {/* Gradual blur overlay — fades in from bottom up */}
