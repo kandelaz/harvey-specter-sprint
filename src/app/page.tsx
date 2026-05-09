@@ -101,7 +101,7 @@ export default function Home() {
             <p className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] text-white uppercase mix-blend-overlay leading-[1.1] mb-0.5 self-center md:self-start">
               [ Hello i&apos;m ]
             </p>
-            <h1 className="text-[127px] md:text-[13.75vw] font-medium text-white mix-blend-overlay text-center capitalize tracking-[-0.07em] leading-[0.9] whitespace-pre-wrap md:whitespace-nowrap w-full">
+            <h1 className="text-[127px] md:text-[13.75vw] font-medium text-white mix-blend-overlay text-center md:text-left capitalize tracking-[-0.07em] leading-[0.9] whitespace-pre-wrap md:whitespace-nowrap w-full">
               Harvey   Specter
             </h1>
           </div>
