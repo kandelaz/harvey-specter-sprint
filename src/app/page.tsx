@@ -107,9 +107,9 @@ export default function Home() {
           </div>
 
           {/* Description — pinned bottom-right on desktop, bottom-left on mobile */}
-          <div className="absolute bottom-8 md:bottom-10 left-0 md:left-auto md:right-0 flex md:justify-end">
-            <div className="max-w-[294px] flex flex-col gap-4">
-              <p className="text-[13px] font-bold italic text-[#1f1f1f] uppercase tracking-[-0.04em] leading-[1.1]">
+          <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 flex md:justify-end">
+            <div className="max-w-[294px] flex flex-col gap-4 items-center md:items-start">
+              <p className="text-[13px] font-bold italic text-[#1f1f1f] uppercase tracking-[-0.04em] leading-[1.1] text-center md:text-left">
                 H.Studio is a{" "}
                 <span className="font-normal">full-service</span> creative
                 studio creating beautiful digital experiences and products. We
