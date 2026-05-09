@@ -109,7 +109,7 @@ export default function Home() {
           </div>
 
           {/* Description — pinned bottom-right on desktop, bottom-left on mobile */}
-          <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 flex md:justify-end">
+          <div className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 flex md:justify-end">
             <div className="w-[335px] md:max-w-[294px] flex flex-col gap-4 items-start">
               <p className="text-[13px] font-bold italic text-[#1f1f1f] uppercase tracking-[-0.04em] leading-[1.1] text-left">
                 H.Studio is a{" "}
