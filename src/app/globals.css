@@ -31,9 +31,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 42% 15%;
+  object-position: 42% 20%;
   transform: scale(2.054);
-  transform-origin: 42% 15%;
+  transform-origin: 42% 20%;
 }
 
 @media (min-width: 768px) {
