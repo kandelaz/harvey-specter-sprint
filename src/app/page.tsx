@@ -101,15 +101,15 @@ export default function Home() {
             <p className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] text-white uppercase mix-blend-overlay leading-[1.1] mb-0.5 self-center md:self-start">
               [ Hello i&apos;m ]
             </p>
-            <h1 className="text-[110px] md:text-[clamp(115px,15.8vw,228px)] font-medium text-white mix-blend-overlay text-center capitalize tracking-[-0.07em] leading-[0.9] whitespace-pre-wrap md:whitespace-nowrap w-full">
+            <h1 className="text-[127px] md:text-[clamp(132px,18.2vw,262px)] font-medium text-white mix-blend-overlay text-center capitalize tracking-[-0.07em] leading-[0.9] whitespace-pre-wrap md:whitespace-nowrap w-full">
               Harvey   Specter
             </h1>
           </div>
 
           {/* Description — pinned bottom-right on desktop, bottom-left on mobile */}
           <div className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 flex md:justify-end">
-            <div className="max-w-[294px] flex flex-col gap-4 items-center md:items-start">
-              <p className="text-[13px] font-bold italic text-[#1f1f1f] uppercase tracking-[-0.04em] leading-[1.1] text-center md:text-left">
+            <div className="w-[335px] md:max-w-[294px] flex flex-col gap-4 items-start">
+              <p className="text-[13px] font-bold italic text-[#1f1f1f] uppercase tracking-[-0.04em] leading-[1.1] text-left">
                 H.Studio is a{" "}
                 <span className="font-normal">full-service</span> creative
                 studio creating beautiful digital experiences and products. We
