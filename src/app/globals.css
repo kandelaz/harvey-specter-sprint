@@ -32,10 +32,13 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: 42% 12%;
+  transform: scale(1.15);
+  transform-origin: 42% 12%;
 }
 
 @media (min-width: 768px) {
   .hero-img {
     object-position: 42% 18%;
+    transform-origin: 42% 18%;
   }
 }
