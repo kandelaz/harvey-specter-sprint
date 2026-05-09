@@ -32,6 +32,6 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: 42% 0%;
-  transform: translateY(-20%) scale(2.054);
+  transform: translateY(-35%) scale(2.054);
   transform-origin: 42% 0%;
 }
