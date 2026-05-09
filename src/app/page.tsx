@@ -10,6 +10,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+    <>
     <main className="relative h-screen overflow-hidden bg-[#c5cdd2]">
       {/* Background image */}
       <img
@@ -127,5 +128,75 @@ export default function Home() {
         </div>
       </div>
     </main>
+
+    {/* Bio / About section */}
+    <section className="px-4 md:px-8 py-12 md:py-[120px]">
+      <div className="flex flex-col gap-6">
+
+        {/* [ 8+ years in industry ] + rule */}
+        <div className="flex flex-col gap-3 items-end">
+          <p className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] uppercase text-[#1f1f1f] tracking-[-0.04em] leading-[1.1] text-right">
+            [ 8+ years in industry ]
+          </p>
+          <div className="w-full h-px bg-[#1f1f1f]" />
+        </div>
+
+        {/* Text block */}
+        <div className="flex flex-col gap-2 items-center md:items-start">
+
+          {/* 001 — mobile only, above text */}
+          <span className="md:hidden font-[family-name:var(--font-geist-mono)] text-[13px] text-[#1f1f1f] leading-[1.1] uppercase mb-1">
+            001
+          </span>
+
+          {/* A creative director   / */}
+          <div className="flex items-start gap-3 w-full justify-center md:justify-start">
+            <p className="font-light text-[32px] md:text-[96px] tracking-[-0.08em] leading-[0.84] whitespace-pre uppercase">
+              A creative director   /
+            </p>
+            <span className="hidden md:block font-[family-name:var(--font-geist-mono)] text-[14px] text-[#1f1f1f] leading-[1.1] mt-4">
+              001
+            </span>
+          </div>
+
+          {/* Photographer */}
+          <div className="w-full flex justify-center md:justify-start md:pl-[214px]">
+            <p className="font-light text-[32px] md:text-[96px] tracking-[-0.08em] leading-[0.84] whitespace-nowrap uppercase">
+              Photographer
+            </p>
+          </div>
+
+          {/* Born & raised */}
+          <div className="w-full flex justify-center md:justify-start md:pl-[610px]">
+            <p className="font-light text-[32px] md:text-[96px] tracking-[-0.08em] leading-[0.84] whitespace-nowrap uppercase">
+              Born{" "}
+              <span className="font-[family-name:var(--font-playfair)] italic font-normal">&amp;</span>
+              {" "}raised
+            </p>
+          </div>
+
+          {/* on the south side */}
+          <div className="w-full flex justify-center md:justify-start">
+            <p className="font-light text-[32px] md:text-[96px] tracking-[-0.08em] leading-[0.84] whitespace-nowrap uppercase">
+              on the south side
+            </p>
+          </div>
+
+          {/* of chicago. + [ creative freelancer ] */}
+          <div className="w-full flex justify-center md:justify-start md:pl-[606px]">
+            <div className="flex flex-col items-center md:flex-row md:items-end md:gap-4">
+              <p className="font-light text-[32px] md:text-[96px] tracking-[-0.08em] leading-[0.84] whitespace-nowrap uppercase">
+                of chicago.
+              </p>
+              <span className="font-[family-name:var(--font-geist-mono)] text-[13px] md:text-[14px] text-[#1f1f1f] leading-[1.1] mt-3 md:mt-0 md:mb-6">
+                [ creative freelancer ]
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    </>
   );
 }
